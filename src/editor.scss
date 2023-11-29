@@ -2,20 +2,3 @@
     margin-top: -8px;
     padding: 0 16px 16px;
 }
-
-// If enqueueing front end JavaScript for reversing columns, remove
-// the index.scss file and then this is needed for the Editor.
-// 
-//.wp-block-columns {
-//     &.is-reversed-direction-on-mobile {
-//         @media ( max-width: 781px ) {
-//             flex-direction: column-reverse;
-//         }
-
-//         &.is-not-stacked-on-mobile {
-//             @media ( max-width: 781px ) {
-//                 flex-direction: row-reverse;
-//             }
-//         }
-//     }
-// }

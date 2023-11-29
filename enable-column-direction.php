@@ -49,6 +49,8 @@ add_action( 'enqueue_block_editor_assets', 'enable_column_direction_enqueue_bloc
 /**
  * Enqueue block styles 
  * (Applies to both frontend and Editor)
+ * 
+ * Note: Disable if using front-end JavaScript to control column order.
  */
 function enable_column_direction_block_styles() {
     $plugin_path = untrailingslashit( plugin_dir_path( __FILE__ ) );
@@ -67,16 +69,32 @@ function enable_column_direction_block_styles() {
 add_action( 'init', 'enable_column_direction_block_styles' );
 
 /**
- * Enqueue frontend JavaScript to reverse column direction instead of CSS. 
+ * Enqueue front-end JavaScript to reverse column direction instead of CSS. 
  * (A more accessible approach)
  */
 function enable_column_direction_frontend_scripts() {
     wp_enqueue_script(
-        'my-custom-script', 
+        'enable-column-direction-frontend-scripts', 
         plugins_url( '/build/frontend.js', __FILE__ ) 
     );
 }
 //add_action( 'wp_enqueue_scripts', 'enable_column_direction_frontend_scripts' );
+
+
+/**
+ * Enqueue content assets but only in the Editor.
+ * 
+ * Note: Enable if using front-end JavaScript to control column order.
+ */
+function enable_column_direction_enqueue_editor_content_assets() {
+    if ( is_admin() ) {
+        wp_enqueue_style(
+            'enable-column-direction-editor-content-styles',
+            plugins_url( '/build/style.css', __FILE__ )
+        );
+    }
+}
+//add_action( 'enqueue_block_assets', 'enable_column_direction_enqueue_editor_content_assets' );
 
 /**
  * Render icons on the frontend.
