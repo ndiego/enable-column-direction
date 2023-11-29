@@ -9,11 +9,7 @@ import classnames from 'classnames';
 import { __ } from '@wordpress/i18n';
 import { addFilter } from '@wordpress/hooks';
 import { InspectorControls } from '@wordpress/block-editor';
-import {
-	PanelBody,
-	PanelRow,
-	ToggleControl
-} from '@wordpress/components';
+import { ToggleControl } from '@wordpress/components';
 
 /**
  * Add the attribute needed for reversing column direction on mobile.
