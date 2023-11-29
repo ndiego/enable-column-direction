@@ -1,0 +1,13 @@
+.wp-block-columns {
+    &.is-reversed-direction-on-mobile {
+        @media ( max-width: 781px ) {
+            flex-direction: column-reverse;
+        }
+
+        &.is-not-stacked-on-mobile {
+            @media ( max-width: 781px ) {
+                flex-direction: row-reverse;
+            }
+        }
+    }
+}
