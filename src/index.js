@@ -66,7 +66,7 @@ function addInspectorControls( BlockEdit ) {
 			<>
 				<BlockEdit { ...props } />
 				<InspectorControls>
-					<div class="enable-reverse-direction-container">
+					<div className="enable-reverse-direction-container">
 						<ToggleControl
 							label={ __(
 								'Reverse direction on mobile',
@@ -75,7 +75,8 @@ function addInspectorControls( BlockEdit ) {
 							checked={ isReversedDirectionOnMobile }
 							onChange={ () => {
 								setAttributes( {
-									isReversedDirectionOnMobile: ! isReversedDirectionOnMobile,
+									isReversedDirectionOnMobile:
+										! isReversedDirectionOnMobile,
 								} );
 							} }
 						/>
@@ -102,12 +103,16 @@ function addClasses( BlockListBlock ) {
 	return ( props ) => {
 		const { name, attributes } = props;
 
-		if ( 'core/columns' !== name || ! attributes?.isReversedDirectionOnMobile ) {
+		if (
+			'core/columns' !== name ||
+			! attributes?.isReversedDirectionOnMobile
+		) {
 			return <BlockListBlock { ...props } />;
 		}
 
 		const classes = classnames( props?.className, {
-			'is-reversed-direction-on-mobile': attributes?.isReversedDirectionOnMobile,
+			'is-reversed-direction-on-mobile':
+				attributes?.isReversedDirectionOnMobile,
 		} );
 
 		return <BlockListBlock { ...props } className={ classes } />;
