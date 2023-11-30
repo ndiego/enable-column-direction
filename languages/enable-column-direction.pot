@@ -1,0 +1,39 @@
+# Copyright (C) 2023 Nick Diego
+# This file is distributed under the GPLv2.
+msgid ""
+msgstr ""
+"Project-Id-Version: Enable Column Direction 0.1.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/enable-column-direction\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2023-11-30T19:25:14+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.7.1\n"
+"X-Domain: enable-column-direction\n"
+
+#. Plugin Name of the plugin
+msgid "Enable Column Direction"
+msgstr ""
+
+#. Plugin URI of the plugin
+msgid "https://www.nickdiego.com/"
+msgstr ""
+
+#. Description of the plugin
+msgid "Adds a toggle to Columns blocks that allows you to reverse the column direction on mobile devices."
+msgstr ""
+
+#. Author of the plugin
+msgid "Nick Diego"
+msgstr ""
+
+#. Author URI of the plugin
+msgid "https://www.nickdiego.com"
+msgstr ""
+
+#: build/index.js:1
+msgid "Reverse direction on mobile"
+msgstr ""
